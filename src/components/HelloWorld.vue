@@ -38,6 +38,7 @@ export default {
   props: {
     msg: String
   },
+  // using provide/inject
   // inject: ['$FullStory'],
 }
 </script>

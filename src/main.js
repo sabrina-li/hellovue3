@@ -8,8 +8,8 @@ FullStory.init({
 });
 
 const app = createApp(App);
-app.config.globalProperties.window = window //reactive(window) doesn't make org2 work
-app.config.globalProperties.$FullStory = FullStory //reactive(window) doesn't make org2 work
-
+// using globalProperties
+app.config.globalProperties.$FullStory = FullStory
+// using provide/inject
 // .provide("$FullStory", FullStory)
 app.mount('#app')
