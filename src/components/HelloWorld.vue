@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button @click="$FullStory.event('hi')">fs</button>
+    <button @click="$FullStory.event('hi')">fs event</button>
+    <button @click="window.open($FullStory.getCurrentSessionURL(), '_blank');">fs url</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -37,7 +38,7 @@ export default {
   props: {
     msg: String
   },
-  inject: ['$FullStory'],
+  // inject: ['$FullStory'],
 }
 </script>
 
